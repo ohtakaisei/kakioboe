@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!--
+    書きおぼえ アイコン
+    黄金比 φ ≈ 1.618 で寸法を決めている
+      1024 / φ = 633   633 / φ = 391   391 / φ = 242   242 / φ = 150   150 / φ = 92
+      罫線: y = 391, 633（間隔 242）と 783（間隔 150）
+      赤い余白線: x = 242
+      赤シート: 472 × 292 の黄金長方形（472 / 292 ≈ φ）、めくれた角は 292 / φ² ≈ 111
+  -->
+  <rect width="1024" height="1024" fill="#F6EFE1"/>
+
+  <!-- 罫線と余白線 -->
+  <g stroke="#9FB3CF" stroke-width="6" stroke-linecap="round" opacity="0.7">
+    <line x1="0" y1="391" x2="1024" y2="391"/>
+    <line x1="0" y1="633" x2="1024" y2="633"/>
+    <line x1="0" y1="875" x2="1024" y2="875"/>
+  </g>
+  <line x1="242" y1="0" x2="242" y2="1024" stroke="#D9363E" stroke-width="6" opacity="0.4"/>
+
+  <!-- 1 行目: 書いた文字（ペンの線） -->
+  <path d="M300 356
+           C 316 300, 356 282, 372 318
+           C 386 350, 362 378, 340 366
+           C 318 354, 346 300, 398 304
+           C 440 308, 432 370, 464 370
+           C 498 370, 490 300, 530 302
+           C 570 304, 552 372, 592 372
+           C 628 372, 630 312, 662 310
+           C 690 308, 690 360, 720 356"
+        fill="none" stroke="#22252D" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 2 行目: 隠しマーカーを引いた答え（赤シートの下に続いている） -->
+  <rect x="300" y="533" width="560" height="100" rx="14" fill="#2EB873" opacity="0.45"/>
+  <path d="M326 598 C 348 556, 374 556, 380 590 S 414 614, 430 576"
+        fill="none" stroke="#22252D" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 赤シート（472 × 292 の黄金長方形。左下の角がめくれている） -->
+  <g transform="translate(676 600) rotate(-6) translate(-236 -146)">
+    <polygon points="0,0 472,0 472,292 111,292 0,181" fill="#22252D" opacity="0.13" transform="translate(14 18)"/>
+    <polygon points="0,0 472,0 472,292 111,292 0,181" fill="#D9363E"/>
+    <line x1="14" y1="12" x2="458" y2="12" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.3"/>
+    <!-- めくれた角: 裏面と、折り目に沿った濃い影 -->
+    <polygon points="0,181 111,292 111,181" fill="#B9262E" opacity="0.55" transform="translate(10 -6)"/>
+    <polygon points="0,181 111,292 111,181" fill="#F4B3B5"/>
+    <line x1="0" y1="181" x2="111" y2="292" stroke="#A81F27" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
